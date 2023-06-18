@@ -21,7 +21,7 @@ export default function Navbar(){
   }, [])
 
     return (
-      <div className="fixed top-0 w-full text-white" style={{backgroundColor: scrollY > 300 ? '#000': ''}}>
+      <div className="fixed p-4 top-0 w-full text-white" style={{backgroundColor: scrollY > 300 ? '#000': ''}}>
         <div className="flex justify-between borde-2 border-red-500">
           <div id="logo"><h2>LOGO</h2></div>
           {deviceWidth > 768 &&
