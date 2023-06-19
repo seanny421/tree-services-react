@@ -1,4 +1,4 @@
-import img from '../../images/tree-felling-circle.png'
+import img from '../../images/tree-felling-circle-fixed.png'
 import hedge from '../../images/hedge-trimming.jpeg'
 import styled from 'styled-components';
 
@@ -30,15 +30,18 @@ export default function Services(){
     <div id='services' className='mt-10'>
       <StyledAboutDiv color='#decfa2'>
         <div className='w-3/4 m-10'>
-        <h1>Our Services</h1>
+          <h1>Our Services</h1>
+          <p className='mb-10'>
+            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+          </p>
         {services.map(function(service, index){
           if(index === 0 || index % 2 === 0){
             return(
-              <div key={index} className='flex items-center border border-blue-500'>
-                <div className='w-1/2 border border-red-500'>
-                  <img className='w-full rounded-full' src={service.image} alt={service.name}/>
+              <div key={index} className='flex items-center borde border-blue-500'>
+                <div className='w-1/2 borde border-red-500 flex justify-center'>
+                  <img className='w-1/2 rounded-full' src={service.image} alt={service.name}/>
                 </div>
-                <div className='w-1/2 text-left border border-red-500'>
+                <div className='w-1/2 text-left borde border-red-500'>
                   <h1>{service.name}</h1>
                   <p>{service.description}</p>
                 </div>
@@ -47,13 +50,13 @@ export default function Services(){
           }
           else{
             return(
-              <div key={index} className='flex items-center border border-blue-500'>
-                <div className='w-1/2 text-right border border-red-500'>
+              <div key={index} className='flex  items-center borde border-blue-500'>
+                <div className='w-1/2 text-right borde border-red-500'>
                   <h1>{service.name}</h1>
                   <p>{service.description}</p>
                 </div>
-                <div className='w-1/2 border border-red-500'>
-                  <img className='w-full rounded-full' src={service.image} alt={service.name}/>
+                <div className='w-1/2 borde border-red-500 flex justify-center'>
+                  <img className='w-1/2 rounded-full' src={service.image} alt={service.name}/>
                 </div>
               </div>
             );

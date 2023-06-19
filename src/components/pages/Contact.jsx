@@ -11,17 +11,35 @@ export default function Contact(){
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
 
-
+  function handleFormSubmit(){
+    //check empty input fields
+    
+    //write email
+  }
 
   return(
     <div id='contact' className="text-white">
       <StyledAboutDiv style={{backgroundImage: `url(${img})`, backgroundSize: 'cover'}}>
-        <h1>Contact</h1>
-        <div className={`grid grid-cols-2 gap-2 text-black`}>
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} className={`p-2 ${deviceWidth < 768 ? 'col-span-2': ''}`} placeholder="Name"/>
-          <input type="text" value={phone} onChange={(e) => setPhone(e.target.value)} className={`p-2 ${deviceWidth < 768 ? 'col-span-2': ''}`} placeholder="Phone No"/>
-          <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} className="col-span-2  p-2" placeholder="Email"/>
-          <textarea value={message} onChange={(e) => setMessage(e.target.value)} className="col-span-2  p-2" placeholder="Message"/>
+        <h1 className="mb-2">Contact</h1>
+        <div className={`w-1/3 grid grid-cols-2 gap-2 text-black`}>
+          <input type="text" value={name} onChange={(e) => setName(e.target.value)} className={`p-3 ${deviceWidth < 768 ? 'col-span-2': ''}`} placeholder="Name"/>
+          <input type="text" value={phone} onChange={(e) => setPhone(e.target.value)} className={`p-3 ${deviceWidth < 768 ? 'col-span-2': ''}`} placeholder="Phone No"/>
+          <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} className="col-span-2  p-3" placeholder="Email"/>
+          <textarea value={message} onChange={(e) => setMessage(e.target.value)} className="col-span-2  p-3" placeholder="Message"/>
+
+          <div onClick={handleFormSubmit} 
+            className={`
+            col-span-2
+            text-white
+            border 
+            py-2 px-10 
+            border-white
+            hover:bg-white
+            hover:text-black
+            hover:cursor-pointer`}>
+
+            <h2>Submit</h2>
+          </div>
         </div>
       </StyledAboutDiv>
     </div>
